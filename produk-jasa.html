@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desa Karangduren</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="button">
+            <a href="#">
+                <img id="logo" src="assets/img/logo/logo.png" alt="Logo Karangduren">
+                <div class="info-logo">
+                    <h6>Desa Karangduren</h6>
+                    <h6>Kabupaten Klaten</h6>
+                </div>
+            </a>
+        </div>
+        <img src="assets/img/logo/nav-bar.png" alt="Navbar Butoon" id="navbar-icon">
+        <ul class="navbar-group--close" id="navbar-group">
+            <li class="btn-navbar"><a href='index.html'">Beranda</a></li>
+            <li class="btn-navbar"><a href='profil-dusun.html'">Profil Dusun</a></li>
+            <li class="btn-navbar"><a href='infografis.html'">Infografis</a></li>
+            <li class="btn-navbar"><a href='berita.html'">Berita</a></li>
+            <li class="btn-navbar" style="background-color: #91672C;"><a href='produk-jasa.html'">Produk & Jasa</a></li>
+        </ul>
+    </nav>
+
+  </header>
+  <main>
+    <div class="container">
+      <div class="header">
+      <h1>Produk dan Jasa</h1>
+    </div>
+    </div>
+
+  <div class="categories">
+      <button class="active" onclick="filterCategory('all')">All</button>
+      <button onclick="filterCategory('homestay')">Homestay</button>
+      <button onclick="filterCategory('kuliner')">Kuliner</button>
+      <button onclick="filterCategory('tour_guide')">Tour Guide</button>
+      <button onclick="filterCategory('toko')">Toko</button>
+  </div>
+  <div class="content-container">
+      <div class="news-grid" id="newsGrid"></div>
+  </div>
+
+  <!-- <div class="container" id="productContainer"> -->
+      <!-- Cards will be rendered here -->
+  </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="assets/img/logo/logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="footer-content">
+            <h3>Desa Karangduren</h3>
+            <p>Kecamatan Kebonarum</p>
+            <p>Kabupaten Klaten</p>
+            <p>Provinsi Jawa Tengah</p>
+        </div>
+        <div class="footer-contact">
+            <p><i class="email-icon"></i> example@domain.com</p>
+            <p><i class="instagram-icon"></i> username</p>
+            <p><i class="phone-icon"></i> +62 800 0000 0000</p>
+        </div>
+    </div>
+</footer>
+  <script src="script.js"></script>
+  <script>
+    const products = [
+    {
+        category: 'kuliner',
+        name: 'Warung Klontong Anggita',
+        price: 'Rp 0',
+        description: 'Warung ini beralamat di RT 6. Menjual berbagai jajanan, minuman, dan lain-lain.',
+        contact: '081326241649',
+        image: 'assets/img/logo/balai-desa.jpg'
+    },
+    {
+        category: 'toko',
+        name: 'Warung Kelontong Dheva',
+        price: 'Rp 0',
+        description: 'Warung kelontong yang menjual keperluan sehari-hari, seperti makanan, minuman, sembako, dan obat-obatan.',
+        contact: '085225000303',
+        image: 'assets/img/logo/balai-desa.jpg'
+    },
+    {
+        category: 'homestay',
+        name: 'Homestay Aishwa',
+        price: 'Rp 100.000/malam',
+        description: 'Homestay nyaman terletak di tengah perkampungan dengan suasana asri.',
+        contact: '082323920229',
+        image: 'assets/img/logo/balai-desa.jpg'
+    }
+];
+
+function renderProducts(filter) {
+    const container = document.getElementById('newsGrid');
+    container.innerHTML = '';
+    
+    const filteredProducts = filter === 'all' ? products : products.filter(product => product.category === filter);
+
+    filteredProducts.forEach(product => {
+        const card = document.createElement('div');
+        card.classList.add('news-item');
+
+        card.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <div class="card-content">
+                <h3>${product.name}</h3>
+                <p class="price">${product.price}</p>
+                <p>${product.description}</p>
+                <p class="contact">☎️ ${product.contact}</p>
+            </div>
+        `;
+
+        container.appendChild(card);
+    });
+  }
+
+
+  function filterCategory(category) {
+      document.querySelectorAll('.categories button').forEach(button => button.classList.remove('active'));
+      document.querySelector(`button[onclick="filterCategory('${category}')"]`).classList.add('active');
+      renderProducts(category);
+  }
+
+  // Render all products initially
+  renderProducts('all');
+  </script>
+</body>
+</html>

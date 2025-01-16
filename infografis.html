@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desa Karangduren</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="sb-admin-2.min.css">
+  <!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<!-- Custom fonts for this template-->
+<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+
+<!-- Custom styles for this template-->
+<link href="startbootstrap-sb-admin-2-gh-pages/css/sb-admin-2.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="button">
+            <a href="#">
+                <img id="logo" src="assets/img/logo/logo.png" alt="Logo Karangduren">
+                <div class="info-logo">
+                    <h6>Desa Karangduren</h6>
+                    <h6>Kabupaten Klaten</h6>
+                </div>
+            </a>
+        </div>
+        <img src="assets/img/logo/nav-bar.png" alt="Navbar Butoon" id="navbar-icon">
+        <ul class="navbar-group--close" id="navbar-group">
+            <li class="btn-navbar"><a href='index.html'">Beranda</a></li>
+            <li class="btn-navbar"><a href='profil-dusun.html'">Profil Dusun</a></li>
+            <li class="btn-navbar" style="background-color: #91672C;"><a href='infografis.html'">Infografis</a></li>
+            <li class="btn-navbar"><a href='berita.html'">Berita</a></li>
+            <li class="btn-navbar"><a href='produk-jasa.html'">Produk & Jasa</a></li>
+        </ul>
+    </nav>
+
+  </header>
+  <main>
+    <div class="container">
+      <div class="header">
+      <h1>Infografis</h1>
+      </div>
+    </div>
+
+  <div class="categories">
+    <button onclick="showContent('sejarah')">Sejarah</button>
+    <button onclick="showContent('penduduk')">Penduduk</button>
+    <button onclick="showContent('wisata')">Destinasi Wisata</button>
+  </div>
+
+  <div class="content-container">
+    <div id="sejarah" class="content">
+        <center>
+            <h2>Sejarah</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, blanditiis cum neque veritatis molestiae voluptatum? A culpa possimus, doloribus aliquid earum iure in, maxime neque, debitis accusantium mollitia provident quis ea tenetur quisquam laborum voluptas cum voluptate iusto perferendis dicta molestias. Dicta explicabo id, dolorem debitis soluta delectus voluptate illo quae nemo perspiciatis nostrum eum tenetur obcaecati pariatur earum labore consectetur, officia quod! Sapiente, repellat ab at atque dolorem iusto accusamus possimus odit porro, maxime sed, sunt perspiciatis beatae dolores iure dolorum deserunt a? Sequi temporibus perferendis commodi eius tempora laboriosam quas voluptatibus laborum ad, quaerat recusandae rem alias laudantium.</p>
+        </center>
+    </div>
+    <div id="penduduk" class="content" style="display: none;">
+        <center>
+            <h2>Penduduk</h2>
+      </center>
+      <div class="container-resident">
+        <div class="card-content-resident-row">
+          <div class="card-content-resident-column">
+            <div class="card-content-resident">
+              <img src="assets/img/logo/keluarga.png">
+              <div>
+                <h3 class="price">Total Jiwa</h3>
+                <p>598</p>
+              </div>
+            </div>
+    
+            <div class="card-content-resident">
+              <img src="assets/img/logo/male.png">
+              <div>
+                <h3 class="price">Laki - Laki</h3>
+                <p>598</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-content-resident-column">
+            <div class="card-content-resident">
+              <img src="assets/img/logo/person.png">
+              <div>
+                <h3 class="price">Kepala Keluarga</h3>
+                <p>598</p>
+              </div>
+            </div>
+    
+            <div class="card-content-resident">
+              <img src="assets/img/logo/female.png">
+              <div>
+                <h3 class="price">Perempuan</h3>
+                <p>598</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="content-container">
+      <center>
+        <h2>Pekerjaan</h2>
+    </center>
+      <div class="card-content-education">
+        
+        <div class="col-xl-4 col-lg-5">
+          <div class="card shadow mb-4">
+              <!-- Card Header - Dropdown -->
+              <div
+                  class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
+                  <div class="dropdown no-arrow">
+                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                          aria-labelledby="dropdownMenuLink">
+                          <div class="dropdown-header">Dropdown Header:</div>
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                  </div>
+              </div>
+              <!-- Card Body -->
+              <div class="card-body">
+                  <div class="chart-pie pt-4 pb-2">
+                      <canvas id="myPieChart"></canvas>
+                  </div>
+                  <div class="mt-4 text-center small">
+                      <span class="mr-2">
+                          <i class="fas fa-circle text-primary"></i> Direct
+                      </span>
+                      <span class="mr-2">
+                          <i class="fas fa-circle text-success"></i> Social
+                      </span>
+                      <span class="mr-2">
+                          <i class="fas fa-circle text-info"></i> Referral
+                      </span>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      </div>
+      
+      <div class="card-content-job">
+        <h3>Petani</h3>
+        <p>212</p>
+      </div>
+      <div class="card-content-job">
+        <h3>Petani</h3>
+        <p>212</p>
+      </div>
+      <div class="card-content-job">
+        <h3>Petani</h3>
+        <p>212</p>
+      </div>
+      <div class="card-content-job">
+        <h3>Petani</h3>
+        <p>212</p>
+      </div>
+      <div class="card-content-job">
+        <h3>Petani</h3>
+        <p>212</p>
+      </div>
+      <div class="card-content-job">
+        <h3>Petani</h3>
+        <p>212</p>
+      </div>
+      <div class="card-content-job">
+        <h3>Petani</h3>
+        <p>212</p>
+      </div>
+    </div>
+  </div>
+    
+    <div id="wisata" class="content" style="display: none;">
+      <center>
+        <h2>Destinasi Wisata</h2>
+      </center>
+      <div class="news-grid">
+        <div class="news-item">
+            <img src="assets/img/logo/balai-desa-landscape.jpg" alt="Product Image">
+            <div class="card-content">
+              <h3>Homestay Aishwa</h3>
+              <p class="price">Rp 50000</p>
+              <p>Lorem50</p>
+              <p class="contact">☎️ 082111111111</p>
+            </div>
+          </div>
+        <div class="news-item">
+          <img src="assets/img/logo/balai-desa-landscape.jpg" alt="Product Image">
+          <div class="card-content">
+            <h3>Homestay Aishwa</h3>
+            <p class="price">Rp 50000</p>
+            <p>Lorem50</p>
+            <p class="contact">☎️ 082111111111</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="assets/img/logo/logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="footer-content">
+            <h3>Desa Karangduren</h3>
+            <p>Kecamatan Kebonarum</p>
+            <p>Kabupaten Klaten</p>
+            <p>Provinsi Jawa Tengah</p>
+        </div>
+        <div class="footer-contact">
+            <p><i class="email-icon"></i> example@domain.com</p>
+            <p><i class="instagram-icon"></i> username</p>
+            <p><i class="phone-icon"></i> +62 800 0000 0000</p>
+        </div>
+    </div>
+</footer>
+  <script src="script.js"></script>
+   <!-- Bootstrap core JavaScript-->
+   <script src="startbootstrap-sb-admin-2-gh-pages/vendor/jquery/jquery.min.js"></script>
+   <script src="startbootstrap-sb-admin-2-gh-pages/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+   <!-- Core plugin JavaScript-->
+   <script src="startbootstrap-sb-admin-2-gh-pages/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+   <!-- Custom scripts for all pages-->
+   <script src="startbootstrap-sb-admin-2-gh-pages/js/sb-admin-2.min.js"></script>
+
+   <!-- Page level plugins -->
+   <script src="startbootstrap-sb-admin-2-gh-pages/vendor/chart.js/Chart.min.js"></script>
+
+   <!-- Page level custom scripts -->
+   <script src="startbootstrap-sb-admin-2-gh-pages/js/demo/chart-area-demo.js"></script>
+   <script src="startbootstrap-sb-admin-2-gh-pages/js/demo/chart-pie-demo.js"></script>
+
+
+  <script>
+    const products = [
+    {
+        category: 'kuliner',
+        name: 'Warung Klontong Anggita',
+        price: 'Rp 0',
+        description: 'Warung ini beralamat di RT 6. Menjual berbagai jajanan, minuman, dan lain-lain.',
+        contact: '081326241649',
+        image: 'assets/img/logo/balai-desa.jpg'
+    },
+    {
+        category: 'toko',
+        name: 'Warung Kelontong Dheva',
+        price: 'Rp 0',
+        description: 'Warung kelontong yang menjual keperluan sehari-hari, seperti makanan, minuman, sembako, dan obat-obatan.',
+        contact: '085225000303',
+        image: 'assets/img/logo/balai-desa.jpg'
+    },
+    {
+        category: 'homestay',
+        name: 'Homestay Aishwa',
+        price: 'Rp 100.000/malam',
+        description: 'Homestay nyaman terletak di tengah perkampungan dengan suasana asri.',
+        contact: '082323920229',
+        image: 'assets/img/logo/balai-desa.jpg'
+    }
+];
+
+function showContent(id) {
+  const contents = document.querySelectorAll('.content');
+  contents.forEach(content => {
+    content.style.display = 'none';
+  });
+
+  document.getElementById(id).style.display = 'block';
+
+  const buttons = document.querySelectorAll('.categories button');
+  buttons.forEach(button => {
+    button.classList.remove('active');
+  });
+
+  const activeButton = document.querySelector(`.categories button[onclick="showContent('${id}')"]`);
+  if (activeButton) {
+    activeButton.classList.add('active');
+  }
+}
+
+  </script>
+</body>
+</html>

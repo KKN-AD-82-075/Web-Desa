@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desa Karangduren</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="button">
+            <a href="#">
+                <img id="logo" src="assets/img/logo/logo.png" alt="Logo Karangduren">
+                <div class="info-logo">
+                    <h6>Desa Karangduren</h6>
+                    <h6>Kabupaten Klaten</h6>
+                </div>
+            </a>
+        </div>
+        <img src="assets/img/logo/nav-bar.png" alt="Navbar Butoon" id="navbar-icon">
+        <ul class="navbar-group--close" id="navbar-group">
+            <li class="btn-navbar"><a href='index.html'">Beranda</a></li>
+            <li class="btn-navbar"><a href='profil-dusun.html'">Profil Dusun</a></li>
+            <li class="btn-navbar"><a href='infografis.html'">Infografis</a></li>
+            <li class="btn-navbar" style="background-color: #91672C;"><a href='berita.html'">Berita</a></li>
+            <li class="btn-navbar"><a href='produk-jasa.html'">Produk & Jasa</a></li>
+        </ul>
+    </nav>
+
+  </header>
+  <main>
+    <div class="container">
+      <div class="header">
+          <h1>Berita Karangduren</h1>
+          <p>Baca berita menarik dan terkini terkait daerah Karangduren, Kebonarum, Klaten.</p>
+      </div>
+      <div class="search-box">
+          <input type="text" id="search" placeholder="Cari berita...">
+      </div>
+      <div class="news-grid" id="newsGrid"></div>
+
+  </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="assets/img/logo/logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="footer-content">
+            <h3>Desa Karangduren</h3>
+            <p>Kecamatan Kebonarum</p>
+            <p>Kabupaten Klaten</p>
+            <p>Provinsi Jawa Tengah</p>
+        </div>
+        <div class="footer-contact">
+            <p><i class="email-icon"></i> example@domain.com</p>
+            <p><i class="instagram-icon"></i> username</p>
+            <p><i class="phone-icon"></i> +62 800 0000 0000</p>
+        </div>
+    </div>
+</footer>
+  <script src="script.js"></script>
+  <script>
+    const newsData = [
+    {
+        title: "Acara Seni dan Budaya Karangduren 2024",
+        date: "Minggu, 13 Jan 2024",
+        description: "Perhelatan seni dan budaya di Karangduren sukses memikat perhatian warga setempat...",        
+        image: 'assets/img/logo/balai-desa.jpg',
+        url: "event1.html"
+    },
+    {
+        title: "Festival Kuliner Tradisional",
+        date: "Senin, 14 Jan 2024",
+        description: "Festival yang menampilkan berbagai kuliner khas Karangduren berlangsung meriah...",
+        image: 'assets/img/logo/balai-desa.jpg',
+        url: "event2.html"
+    },
+    {
+        title: "Gotong Royong Perbaikan Jalan Desa",
+        date: "Selasa, 15 Jan 2024",
+        description: "Warga Karangduren bersama-sama melakukan gotong royong untuk perbaikan jalan...",
+        image: 'assets/img/logo/balai-desa.jpg',
+        url: "event3.html"
+    }
+    ];
+
+    const newsGrid = document.getElementById("newsGrid");
+
+
+    // Iterasi data JSON dan buat elemen dinamis
+    newsData.forEach(news => {
+        const newsItem = document.createElement("div");
+        newsItem.classList.add("news-item");
+        newsItem.innerHTML = `
+            <img src="${news.image}" alt="${news.title}">
+            <div class="content">
+                <h3>${news.title}</h3>
+                <p class="date">${news.date}</p>
+                <p>${news.description}</p>
+            </div>
+        `;
+        // Tambahkan event listener untuk navigasi
+        newsItem.addEventListener("click", () => {
+            window.location.href = news.url;
+        });
+        newsGrid.appendChild(newsItem);
+    });
+  </script>
+</body>
+</html>

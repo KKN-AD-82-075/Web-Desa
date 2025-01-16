@@ -1,0 +1,676 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: 1px solid rgb(0, 0, 0); 
+}
+
+body{
+    /* color: #F9F5F6; */
+}
+
+/* navbar */
+
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 0.5rem 3rem;
+    background-color: #869361;
+    display: flex;
+    justify-content: start;
+}
+
+nav div{
+    padding: 5px;
+}
+
+nav div .info-logo h6{
+    padding: 5px;
+}
+
+
+#navbar-icon{
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+nav li a{
+    transition: 0.7s;
+    display: block;
+}
+
+nav div a{
+    color: wheat;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+nav .button a:hover{
+    color: rgb(223, 233, 210);
+}
+
+nav .button #logo{
+    width: 30px;
+}
+
+nav .button #sign-in{
+    width: 30px;
+}
+
+nav ul{
+    width: 100%;
+    padding-inline: 5rem;
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+nav .btn-navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+nav .btn-navbar a:hover {
+    background-color: #838D66;
+}
+
+.jumbotron{
+    filter: grayscale(50%) brightness(85%);
+    animation: bgChange 5s infinite;
+    background-size: cover;
+    height: 85vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #183D3D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 1.5rem 5rem 1.5rem;
+    color: #ffffffbb;
+}
+
+@keyframes bgChange{
+    0% {background-image: url('assets/img/logo/kantor-menden.jpg');}
+    50% {background-image: url('assets/img/logo/balai-desa.jpg');}
+    100% {background-image: url('assets/img/logo/pasar-pokoh.jpg');}
+}
+
+.jumbotron div{
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.jumbotron div p{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 18px;
+    color: white;
+}
+
+.jumbotron div h1{
+    font-size: 40px;
+}
+
+.jumbotron div h1 div{
+    color: #bbff00;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container .header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Beranda Jelajah */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.grid-item .content {
+    padding: 15px;
+}
+
+.grid-item .content h3 {
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Sambutan */
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 0px #000000;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+}
+
+/* Profil Dusun */
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #444;
+}
+section ul {
+    list-style: none;
+    padding: 0;
+}
+section ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+section ul li:before {
+    content: "\2022";
+    position: absolute;
+    left: 0;
+    color: #444;
+}
+
+section div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-container {
+    text-align: center;
+    margin-top: 20px;
+}
+.video-container iframe {
+    max-width: 100%;
+    height: 400px;
+    width: 800px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+.info-box {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map-box {
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.info-table th, .info-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.info-table th {
+  background-color: #3498db;
+  color: white;
+}
+
+.info-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.info-table tbody tr:hover {
+  background-color: #eaf6fd;
+}
+
+p {
+  margin: 10px 0;
+  color: #2c3e50;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 10px;
+}
+
+
+.search-box {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.search-box input {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.news-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    gap: 20px;
+}
+.news-item {
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* overflow: hidden; */
+    transition: transform 0.2s;
+}
+.news-item:hover {
+    transform: translateY(-5px);
+}
+.news-item img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+}
+.news-item .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+.news-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+.news-item p {
+    font-size: 0.9rem;
+    color: #777;
+}
+.news-item .date {
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+
+/* Detai Page */
+.back-link {
+    text-decoration: none;
+    color: #555;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.back-link:hover {
+    text-decoration: underline;
+}
+.title {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+.meta {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    color: #777;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+.meta span {
+    margin-right: 10px;
+}
+
+.image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: 350px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+main .container .content-berita{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+/* UMKMM */
+.categories {
+    display: flex;
+    justify-content: center;
+    background-color: #2287BF;
+    gap: 50px;
+    padding: 0.3rem;
+    margin: 0rem 4rem;
+    border-radius: 30px;
+}
+.categories button {
+    background: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+
+.categories button:hover {
+    border-bottom: 2px solid #0e2b3d;
+    font-weight: bold;
+}
+
+.categories button.active {
+    background-color: #3b2f78;
+    font-weight: bold;
+}
+
+/* Infografis */
+.menu-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  gap: 10px;
+}
+
+.content.active {
+  display: block;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+  margin: 0 0 10px;
+}
+
+.card-content .price {
+  color: #007acc;
+  font-weight: bold;
+}
+
+.card-content .contact {
+  margin-top: 10px;
+  color: #555;
+}
+
+.card-content-resident{
+    display: flex;
+    flex-direction: row;
+}
+
+.card-content-resident-row{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.card-content-resident-column{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+
+}
+
+.container-resident img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.container-resident h3 {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.container-resident{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-content-job {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.footer {
+    background-color: #3388bb; 
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.footer-logo .logo {
+    width: 100px; /* Ukuran logo */
+    height: auto;
+}
+
+.footer-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: white;
+
+}
+
+.footer-contact p {
+    margin: 10px 0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.footer-contact p i {
+    margin-right: 10px;
+}
+
+.email-icon::before {
+    content: "✉";
+    font-size: 1.2rem;
+}
+
+.instagram-icon::before {
+    content: "📸";
+    font-size: 1.2rem;
+}
+
+.phone-icon::before {
+    content: "📞";
+    font-size: 1.2rem;
+}
+  
+
+@media only screen and (max-width: 800px){
+    .jumbotron div h1{
+        font-size: 50px;
+    }
+
+    h2{
+        font-size: 18px;
+    }
+
+    h3{
+        font-size: 14px;
+    }
+
+    p, a, blockquote, figcaption, label, input{
+        font-size: 12px;
+    }
+
+    nav{
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        padding: 10px;
+    }
+
+    nav ul{
+        padding: 1px;
+        flex-direction: column;
+    }
+
+    nav ul li{
+        width: 40%;
+        text-align: center;
+    }
+    
+    nav ul li .button a{
+        justify-content: center;
+    }
+    
+    nav .button{
+        margin: auto;
+    }
+    
+    #navbar-icon{
+        display: block;
+    }
+
+    .navbar-group--close{
+        display: none;
+    }
+
+    nav div{
+        justify-content: start;
+        align-items: start;
+    }
+
+
+}
