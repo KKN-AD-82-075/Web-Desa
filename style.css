@@ -88,6 +88,7 @@ nav .btn-navbar a:hover {
 
 .jumbotron{
     filter: grayscale(50%) brightness(85%);
+    /* opacity: 0.7; */
     animation: bgChange 5s infinite;
     background-size: cover;
     height: 85vh;
@@ -108,7 +109,6 @@ nav .btn-navbar a:hover {
 }
 
 .jumbotron div{
-    width: 800px;
     display: flex;
     flex-direction: column;
     text-align: justify;
@@ -121,7 +121,9 @@ nav .btn-navbar a:hover {
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: 18px;
-    color: white;
+    color: black;
+    background-color: #ffffff;
+
 }
 
 .jumbotron div h1{
@@ -129,7 +131,18 @@ nav .btn-navbar a:hover {
 }
 
 .jumbotron div h1 div{
-    color: #bbff00;
+    color: #000000;
+}
+
+.jumbotron div h1 div span{
+    background-color: #ffffff;
+}
+
+
+.jumbotron div h1 span{
+    color: #d42020;
+    background-color: #ffffff;
+
 }
 
 .container {
@@ -150,7 +163,7 @@ nav .btn-navbar a:hover {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
@@ -168,7 +181,8 @@ nav .btn-navbar a:hover {
 
 .grid-item img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
     display: block;
 }
 
@@ -615,11 +629,10 @@ main .container .content-berita{
     content: "📞";
     font-size: 1.2rem;
 }
-  
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 1000px){
     .jumbotron div h1{
-        font-size: 50px;
+        font-size: 30px;
     }
 
     h2{
@@ -672,5 +685,59 @@ main .container .content-berita{
         align-items: start;
     }
 
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 30px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px 0px #000000;
+    }
 
+}
+
+/* Media queries untuk responsivitas */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Kolom lebih kecil untuk layar medium */
+        gap: 15px; /* Kurangi jarak antar elemen */
+    }
+
+    .grid-item .content {
+        padding: 10px; /* Kurangi padding di dalam elemen */
+    }
+
+    .grid-item .content h3 {
+        font-size: 16px; /* Kurangi ukuran font */
+    }
+
+    .grid-item img {
+        height: 150px; /* Sesuaikan tinggi gambar */
+    }
+
+    .profile img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Kolom lebih kecil untuk layar kecil */
+        gap: 10px; /* Kurangi jarak antar elemen */
+    }
+
+    .grid-item .content {
+        padding: 8px; /* Kurangi padding lebih jauh */
+    }
+
+    .grid-item .content h3 {
+        font-size: 14px; /* Ukuran font lebih kecil */
+    }
+
+    .grid-item img {
+        height: 120px; /* Sesuaikan tinggi gambar untuk layar kecil */
+    }
 }
