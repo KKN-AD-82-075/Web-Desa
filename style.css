@@ -17,7 +17,7 @@ body{
 /* navbar */
 
 nav{
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1000;
     width: 100%;
@@ -33,8 +33,8 @@ nav div{
 
 nav div .info-logo h6{
     padding: 5px;
+    font-size: 10px;
 }
-
 
 #navbar-icon{
     width: 30px;
@@ -100,6 +100,7 @@ nav .btn-navbar a:hover {
     align-items: center;
     padding: 5rem 1.5rem 5rem 1.5rem;
     color: #ffffffbb;
+    margin-top: 108px;
 }
 
 @keyframes bgChange{
@@ -151,6 +152,10 @@ nav .btn-navbar a:hover {
     padding: 20px;
 }
 
+.containers{
+    margin-top: 130px;
+}
+
 .container .header{
     display: flex;
     flex-direction: column;
@@ -161,13 +166,18 @@ nav .btn-navbar a:hover {
 
 /* Beranda Jelajah */
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
+/* div .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+} */
 
 .grid-item {
+    width: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -197,6 +207,16 @@ nav .btn-navbar a:hover {
     color: #555;
 }
 
+div .column {
+    display: flex;
+    flex-direction: row;
+}
+
+div .row {
+    width: 50%;
+    display: flex;
+}
+
 /* Sambutan */
 
 .content {
@@ -204,8 +224,6 @@ nav .btn-navbar a:hover {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 20px 30px;
-    padding: 20px;
     border-radius: 10px;
     box-shadow: 2px 2px 5px 0px #000000;
 }
@@ -234,6 +252,7 @@ section {
     max-width: 800px;
     margin: 0 auto;
 }
+
 section h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
@@ -295,12 +314,23 @@ section div{
 }
 
 .map-box {
-  flex: 1;
+  position: relative; /* Untuk mengatur posisi anak elemen */
+  width: 100%;
+  max-width: 1200px;
+  aspect-ratio: 34 / 9;
+  margin: auto;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex; /* Tambahkan Flexbox untuk memusatkan */
+  justify-content: center; /* Pusatkan secara horizontal */
+  align-items: center; /* Pusatkan secara vertikal */
 }
 
+.map-box iframe {
+  width: 90%; 
+  height: 90%; 
+}
 .info-box h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
@@ -690,54 +720,68 @@ main .container .content-berita{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 20px 30px;
-        padding: 20px;
         border-radius: 10px;
         box-shadow: 2px 2px 5px 0px #000000;
+    }
+
+    .grid-item .content {
+        padding: 10px; 
+    }
+
+    .grid-item .content h3 {
+        font-size: 16px; 
+    }
+
+    .grid-item img {
+        height: 150px; 
     }
 
 }
 
 /* Media queries untuk responsivitas */
 @media (max-width: 768px) {
-    .grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Kolom lebih kecil untuk layar medium */
-        gap: 15px; /* Kurangi jarak antar elemen */
-    }
-
-    .grid-item .content {
-        padding: 10px; /* Kurangi padding di dalam elemen */
-    }
-
-    .grid-item .content h3 {
-        font-size: 16px; /* Kurangi ukuran font */
-    }
-
-    .grid-item img {
-        height: 150px; /* Sesuaikan tinggi gambar */
-    }
-
     .profile img {
         width: 150px;
         height: 150px;
     }
+    .grid-item img {
+        height: 250px; 
+    }
+    div .row{
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+    div .column{
+        gap: 10px;
+    }
+    
+    .grid-item {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 }
 
-@media (max-width: 480px) {
-    .grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Kolom lebih kecil untuk layar kecil */
-        gap: 10px; /* Kurangi jarak antar elemen */
+@media (max-width: 500px) {
+    div .column{
+        flex-direction: column;
     }
 
-    .grid-item .content {
-        padding: 8px; /* Kurangi padding lebih jauh */
+    div .row{
+        width: 100%;
+        flex-direction: column;
     }
 
-    .grid-item .content h3 {
-        font-size: 14px; /* Ukuran font lebih kecil */
+    .grid-item {
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
+    .profile img {
+        width: 100px;
+        height: 100px;
+    }
     .grid-item img {
-        height: 120px; /* Sesuaikan tinggi gambar untuk layar kecil */
+        height: 300px; 
     }
 }

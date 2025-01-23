@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Desa Karangduren</title>
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="sb-admin-2.min.css">
   <!-- Bootstrap CSS -->
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -19,6 +18,9 @@
 
 <!-- Custom styles for this template-->
 <link href="startbootstrap-sb-admin-2-gh-pages/css/sb-admin-2.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
   <header>
@@ -44,155 +46,166 @@
 
   </header>
   <main>
-    <div class="container">
-      <div class="header">
-      <h1>Infografis</h1>
+
+    <div class="containers">
+      <div class="container">
+        <div class="header">
+        <h1>Infografis</h1>
+        </div>
       </div>
+  
+    <div class="categories">
+      <button onclick="showContent('sejarah')">Sejarah</button>
+      <button onclick="showContent('penduduk')">Penduduk</button>
+      <button onclick="showContent('wisata')">Destinasi Wisata</button>
     </div>
-
-  <div class="categories">
-    <button onclick="showContent('sejarah')">Sejarah</button>
-    <button onclick="showContent('penduduk')">Penduduk</button>
-    <button onclick="showContent('wisata')">Destinasi Wisata</button>
-  </div>
-
-  <div class="content-container">
-    <div id="sejarah" class="content">
-        <center>
-            <h2>Sejarah</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, blanditiis cum neque veritatis molestiae voluptatum? A culpa possimus, doloribus aliquid earum iure in, maxime neque, debitis accusantium mollitia provident quis ea tenetur quisquam laborum voluptas cum voluptate iusto perferendis dicta molestias. Dicta explicabo id, dolorem debitis soluta delectus voluptate illo quae nemo perspiciatis nostrum eum tenetur obcaecati pariatur earum labore consectetur, officia quod! Sapiente, repellat ab at atque dolorem iusto accusamus possimus odit porro, maxime sed, sunt perspiciatis beatae dolores iure dolorum deserunt a? Sequi temporibus perferendis commodi eius tempora laboriosam quas voluptatibus laborum ad, quaerat recusandae rem alias laudantium.</p>
-        </center>
-    </div>
-    <div id="penduduk" class="content" style="display: none;">
-        <center>
-            <h2>Penduduk</h2>
-      </center>
-      <div class="container-resident">
-        <div class="card-content-resident-row">
-          <div class="card-content-resident-column">
-            <div class="card-content-resident">
-              <img src="assets/img/logo/keluarga.png">
-              <div>
-                <h3 class="price">Total Jiwa</h3>
-                <p>598</p>
-              </div>
-            </div>
-    
-            <div class="card-content-resident">
-              <img src="assets/img/logo/male.png">
-              <div>
-                <h3 class="price">Laki - Laki</h3>
-                <p>598</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="card-content-resident-column">
-            <div class="card-content-resident">
-              <img src="assets/img/logo/person.png">
-              <div>
-                <h3 class="price">Kepala Keluarga</h3>
-                <p>598</p>
-              </div>
-            </div>
-    
-            <div class="card-content-resident">
-              <img src="assets/img/logo/female.png">
-              <div>
-                <h3 class="price">Perempuan</h3>
-                <p>598</p>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
-
+  
     <div class="content-container">
-      <center>
-        <h2>Pekerjaan</h2>
-    </center>
-      <div class="card-content-education">
-        
-        <div class="col-xl-4 col-lg-5">
-          <div class="card shadow mb-4">
-              <!-- Card Header - Dropdown -->
-              <div
-                  class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
-                  <div class="dropdown no-arrow">
-                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                          aria-labelledby="dropdownMenuLink">
-                          <div class="dropdown-header">Dropdown Header:</div>
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
-                  </div>
-              </div>
-              <!-- Card Body -->
-              <div class="card-body">
-                  <div class="chart-pie pt-4 pb-2">
-                      <canvas id="myPieChart"></canvas>
-                  </div>
-                  <div class="mt-4 text-center small">
-                      <span class="mr-2">
-                          <i class="fas fa-circle text-primary"></i> Direct
-                      </span>
-                      <span class="mr-2">
-                          <i class="fas fa-circle text-success"></i> Social
-                      </span>
-                      <span class="mr-2">
-                          <i class="fas fa-circle text-info"></i> Referral
-                      </span>
-                  </div>
-              </div>
-          </div>
+      <div id="sejarah" class="content">
+          <center>
+              <h2>Sejarah</h2>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, blanditiis cum neque veritatis molestiae voluptatum? A culpa possimus, doloribus aliquid earum iure in, maxime neque, debitis accusantium mollitia provident quis ea tenetur quisquam laborum voluptas cum voluptate iusto perferendis dicta molestias. Dicta explicabo id, dolorem debitis soluta delectus voluptate illo quae nemo perspiciatis nostrum eum tenetur obcaecati pariatur earum labore consectetur, officia quod! Sapiente, repellat ab at atque dolorem iusto accusamus possimus odit porro, maxime sed, sunt perspiciatis beatae dolores iure dolorum deserunt a? Sequi temporibus perferendis commodi eius tempora laboriosam quas voluptatibus laborum ad, quaerat recusandae rem alias laudantium.</p>
+          </center>
       </div>
-
-      </div>
+      <div id="penduduk" class="content" style="display: none;">
+          <center>
+              <h2>Penduduk</h2>
+        </center>
+        <div class="container-resident">
+          <div class="card-content-resident-row">
+            <div class="card-content-resident-column">
+              <div class="card-content-resident">
+                <img src="assets/img/logo/keluarga.png">
+                <div>
+                  <h3 class="price">Total Jiwa</h3>
+                  <p>598</p>
+                </div>
+              </div>
       
-      <div class="card-content-job">
-        <h3>Petani</h3>
-        <p>212</p>
+              <div class="card-content-resident">
+                <img src="assets/img/logo/male.png">
+                <div>
+                  <h3 class="price">Laki - Laki</h3>
+                  <p>598</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="card-content-resident-column">
+              <div class="card-content-resident">
+                <img src="assets/img/logo/person.png">
+                <div>
+                  <h3 class="price">Kepala Keluarga</h3>
+                  <p>598</p>
+                </div>
+              </div>
+      
+              <div class="card-content-resident">
+                <img src="assets/img/logo/female.png">
+                <div>
+                  <h3 class="price">Perempuan</h3>
+                  <p>598</p>
+                </div>
+              </div>
+            </div>
+        </div>
       </div>
-      <div class="card-content-job">
-        <h3>Petani</h3>
-        <p>212</p>
-      </div>
-      <div class="card-content-job">
-        <h3>Petani</h3>
-        <p>212</p>
-      </div>
-      <div class="card-content-job">
-        <h3>Petani</h3>
-        <p>212</p>
-      </div>
-      <div class="card-content-job">
-        <h3>Petani</h3>
-        <p>212</p>
-      </div>
-      <div class="card-content-job">
-        <h3>Petani</h3>
-        <p>212</p>
-      </div>
-      <div class="card-content-job">
-        <h3>Petani</h3>
-        <p>212</p>
+  
+      <div class="content-container">
+        <center>
+          <h2>Pekerjaan</h2>
+      </center>
+        <div class="card-content-education">
+          
+          <div class="col-xl-4 col-lg-5">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div
+                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
+                    <div class="dropdown no-arrow">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                            aria-labelledby="dropdownMenuLink">
+                            <div class="dropdown-header">Dropdown Header:</div>
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="chart-pie pt-4 pb-2">
+                        <canvas id="myPieChart"></canvas>
+                    </div>
+                    <div class="mt-4 text-center small">
+                        <span class="mr-2">
+                            <i class="fas fa-circle text-primary"></i> Direct
+                        </span>
+                        <span class="mr-2">
+                            <i class="fas fa-circle text-success"></i> Social
+                        </span>
+                        <span class="mr-2">
+                            <i class="fas fa-circle text-info"></i> Referral
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+        </div>
+        
+        <div class="card-content-job">
+          <h3>Petani</h3>
+          <p>212</p>
+        </div>
+        <div class="card-content-job">
+          <h3>Petani</h3>
+          <p>212</p>
+        </div>
+        <div class="card-content-job">
+          <h3>Petani</h3>
+          <p>212</p>
+        </div>
+        <div class="card-content-job">
+          <h3>Petani</h3>
+          <p>212</p>
+        </div>
+        <div class="card-content-job">
+          <h3>Petani</h3>
+          <p>212</p>
+        </div>
+        <div class="card-content-job">
+          <h3>Petani</h3>
+          <p>212</p>
+        </div>
+        <div class="card-content-job">
+          <h3>Petani</h3>
+          <p>212</p>
+        </div>
       </div>
     </div>
-  </div>
-    
-    <div id="wisata" class="content" style="display: none;">
-      <center>
-        <h2>Destinasi Wisata</h2>
-      </center>
-      <div class="news-grid">
-        <div class="news-item">
+      
+      <div id="wisata" class="content" style="display: none;">
+        <center>
+          <h2>Destinasi Wisata</h2>
+        </center>
+        <div class="news-grid">
+          <div class="news-item">
+              <img src="assets/img/logo/balai-desa-landscape.jpg" alt="Product Image">
+              <div class="card-content">
+                <h3>Homestay Aishwa</h3>
+                <p class="price">Rp 50000</p>
+                <p>Lorem50</p>
+                <p class="contact">☎️ 082111111111</p>
+              </div>
+            </div>
+          <div class="news-item">
             <img src="assets/img/logo/balai-desa-landscape.jpg" alt="Product Image">
             <div class="card-content">
               <h3>Homestay Aishwa</h3>
@@ -201,18 +214,11 @@
               <p class="contact">☎️ 082111111111</p>
             </div>
           </div>
-        <div class="news-item">
-          <img src="assets/img/logo/balai-desa-landscape.jpg" alt="Product Image">
-          <div class="card-content">
-            <h3>Homestay Aishwa</h3>
-            <p class="price">Rp 50000</p>
-            <p>Lorem50</p>
-            <p class="contact">☎️ 082111111111</p>
-          </div>
         </div>
       </div>
     </div>
-  </div>
+    </div>
+    
 
   </main>
   <footer class="footer">
