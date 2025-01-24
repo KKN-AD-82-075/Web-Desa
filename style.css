@@ -10,6 +10,10 @@ html{
     border: 1px solid rgb(0, 0, 0); 
 }
 
+body{
+    /* color: #F9F5F6; */
+}
+
 /* navbar */
 
 nav{
@@ -383,47 +387,60 @@ iframe {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 .news-grid {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
+
 .news-item {
-    width: 400px;
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* overflow: hidden; */
     transition: transform 0.2s;
 }
+
 .news-item:hover {
     transform: translateY(-5px);
 }
+
 .news-item img {
-    width: 400px;
-    height: 300px;
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
     object-fit: cover;
 }
+
 .news-item .content {
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: start;
 }
+
 .news-item h3 {
     font-size: 1.2rem;
     color: #333;
 }
+
 .news-item p {
     font-size: 0.9rem;
     color: #777;
 }
+
 .news-item .date {
     font-size: 0.8rem;
     color: #aaa;
+}
+
+@media (min-width: 600px) {
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .news-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 
@@ -474,6 +491,34 @@ main .container .content-berita{
 }
 
 /* UMKMM */
+@media (max-width: 768px) {
+    .categories {
+        margin: 0rem 2rem; /* Reduce margin on smaller screens */
+        gap: 30px; /* Reduce gap between buttons */
+    }
+
+    .categories button {
+        font-size: 0.9rem; /* Slightly smaller font size */
+        padding: 8px 16px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .categories {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center align buttons */
+        margin: 1rem; /* Add margin for better spacing */
+        gap: 15px; /* Further reduce gap between buttons */
+    }
+
+    .categories button {
+        width: 100%; /* Make buttons full width */
+        text-align: center; /* Center text in buttons */
+        padding: 12px; /* Adjust padding for touch targets */
+        font-size: 1rem; /* Maintain font size for readability */
+    }
+}
+
 .categories {
     display: flex;
     justify-content: center;
@@ -482,17 +527,16 @@ main .container .content-berita{
     padding: 0.3rem;
     margin: 0rem 4rem;
     border-radius: 30px;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
 }
+
 .categories button {
+    display: flex;
     background: none;
     border: none;
-    padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
-    font-size: 1rem;
+    padding: 10px 20px; /* Consistent padding */
+    font-size: 1rem; /* Base font size */
     cursor: pointer;
-    padding: 10px 20px;
-    cursor: pointer;
-    border: none;
     color: white;
     border-radius: 5px;
 }
