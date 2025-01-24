@@ -8,8 +8,8 @@ var getTotal = function(data) {
 };
 
 // Data untuk chart
-const chartData = [55, 30, 15];
-const labels = ["Direct", "Referral", "Social"];
+const chartData = [243, 60, 26, 27, 94, 36];
+const labels = ["Karyawan", "Wiraswasta", "Petani", "Pertukangan", "Buruh Tani", "Pensiunan"];
 const total = getTotal(chartData);
 
 // Pie Chart Example
@@ -20,8 +20,8 @@ var myPieChart = new Chart(ctx, {
     labels: labels,
     datasets: [{
       data: chartData,
-      backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
-      hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
+      backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc', '#f6c23e', '#e74a3b', '#858796'],
+      hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf', '#dda20a', '#be2617', '#6c757d'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
     }],
   },
@@ -53,7 +53,7 @@ var myPieChart = new Chart(ctx, {
       caretPadding: 10,
     },
     legend: {
-      display: false // Menampilkan legend dengan angka
+      // display: false // Menampilkan legend dengan angka
     },
     cutoutPercentage: 60, // Ubah ini untuk memperbesar doughnut chart
   },
