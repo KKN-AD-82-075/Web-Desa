@@ -37,13 +37,20 @@
           </div>
           </div>
       
-        <div class="categories">
+          <div class="categories">
+            <select onchange="filterCategory(this.value)">
+                <option value="produk">Produk</option>
+                <option value="toko">Toko</option>
+                <option value="pelayanan">Pelayanan</option>
+                <option value="tempat-makan">Tempat Makan</option>
+            </select>
             <button class="active" onclick="filterCategory('all')">All</button>
             <button onclick="filterCategory('produk')">Produk</button>
             <button onclick="filterCategory('toko')">Toko</button>
             <button onclick="filterCategory('pelayanan')">Pelayanan</button>
             <button onclick="filterCategory('tempat-makan')">Tempat Makan</button>
         </div>
+
 
         <div class="content-container">
             <div class="news-grid" id="newsGrid"></div>
@@ -67,7 +74,7 @@
         </div>
         <div class="footer-contact">
             <p><i class="email-icon"></i> example@domain.com</p>
-            <p><i class="instagram-icon"></i> username</p>
+            <p><i class="instagram-icon"></i> Sumarna Sp.d</p>
             <p><i class="phone-icon"></i> +62 800 0000 0000</p>
         </div>
     </div>
@@ -78,7 +85,7 @@
     {
         category: 'pelayanan',
         name: 'Data coba',
-        price: 'Rp 0',
+        price: 'Rp xxx',
         description: 'Warung ini beralamat di RT 6. Menjual berbagai jajanan, minuman, dan lain-lain.',
         contact: '081326241649',
         image: 'assets/img/logo/balai-desa.jpg'
@@ -86,7 +93,7 @@
     {
         category: 'toko',
         name: 'Data coba',
-        price: 'Rp 0',
+        price: 'Rp xxx',
         description: 'Warung kelontong yang menjual keperluan sehari-hari, seperti makanan, minuman, sembako, dan obat-obatan.',
         contact: '085225000303',
         image: 'assets/img/logo/balai-desa.jpg'
@@ -94,7 +101,7 @@
     {
         category: 'tempat-makan',
         name: 'Data coba',
-        price: 'Rp 100.000/malam',
+        price: 'Rp xxx',
         description: 'Homestay nyaman terletak di tengah perkampungan dengan suasana asri.',
         contact: '082323920229',
         image: 'assets/img/logo/balai-desa.jpg'

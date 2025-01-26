@@ -54,17 +54,37 @@
         </div>
       </div>
   
-    <div class="categories">
-      <button onclick="showContent('sejarah')">Sejarah</button>
-      <button onclick="showContent('penduduk')">Penduduk</button>
-      <button onclick="showContent('wisata')">Destinasi Wisata</button>
+      <div class="categories">
+        <select onchange="showContent(this.value)">
+            <option value="sejarah">Letak & Luas</option>
+            <option value="penduduk">Penduduk</option>
+            <option value="wisata">Destinasi Wisata</option>
+        </select>
+        <button onclick="showContent('sejarah')">Letak & Luas</button>
+        <button onclick="showContent('penduduk')">Penduduk</button>
+        <button onclick="showContent('wisata')">Destinasi Wisata</button>
     </div>
-  
+
     <div class="content-container">
       <div id="sejarah" class="content">
           <center>
-              <h2>Sejarah</h2>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, blanditiis cum neque veritatis molestiae voluptatum? A culpa possimus, doloribus aliquid earum iure in, maxime neque, debitis accusantium mollitia provident quis ea tenetur quisquam laborum voluptas cum voluptate iusto perferendis dicta molestias. Dicta explicabo id, dolorem debitis soluta delectus voluptate illo quae nemo perspiciatis nostrum eum tenetur obcaecati pariatur earum labore consectetur, officia quod! Sapiente, repellat ab at atque dolorem iusto accusamus possimus odit porro, maxime sed, sunt perspiciatis beatae dolores iure dolorum deserunt a? Sequi temporibus perferendis commodi eius tempora laboriosam quas voluptatibus laborum ad, quaerat recusandae rem alias laudantium.</p>
+              <h2>Letak & Luas Wilayah</h2>
+              <p>Desa Karangduren merupakan salah satu desa di Kecamatan Kebonarum,
+                Kabupaten Klaten, Provinsi Jawa Tengah. Kecamatan Kebonarum memiliki
+                karakteristik geografis berupa dataran rendah hingga perbukitan dengan
+                ketinggian rata-rata 175 meter diatas permukaan laut (MDPL). Wilayah ini
+                memiliki iklim tropis dengan suhu udara berkisar antara 24 hingga 32 derajat
+                celcius sepanjang tahun. Terdapat dua musim utama di wilayah ini, yaitu musim
+                penghujan dan musim kemarau.
+                Desa Karangduren Wilayah 1 sendiri terdiri dari 11 padukuhan yaitu
+                Padukuhan Ngentak, Padukuhan Geneng, Padukuhan Gempolan, Padukuhan
+                Barepan, Padukuhan Somolinggang, Padukuhan Karangduren, Padukuhan
+                Bakal, Padukuhan Jeblog, Padukuhan Tawangsari, Padukuhan Tegal Blimbing,
+                Padukuhan Bedaran.  Wilayah Desa Karangduren memiliki luas sekitar 185.7 Ha
+                dengan mata pencaharian utama penduduknya sebagai petani, buruh, dan
+                pedagang kecil. Desa ini dikenal akan aktivitas pertaniannya, terutama tanaman
+                padi dan palawija, yang sangat bergantung pada sistem irigasi tradisional. 
+                </p>
           </center>
       </div>
       <div id="penduduk" class="content" style="display: none;">
@@ -182,23 +202,35 @@
         </center>
         <div class="news-grid">
           <div class="news-item">
-              <img src="assets/img/logo/balai-desa-landscape.jpg" alt="Product Image">
+              <img src="assets/img/logo/taman-jlengut.jpg" alt="Product Image">
               <div class="card-content">
-                <h3>Homestay Aishwa</h3>
-                <p class="price">Rp 50000</p>
-                <p>Lorem50</p>
-                <p class="contact">☎️ 082111111111</p>
+                <h3>Taman Jlengut</h3>
+                <p class="price">Rp 6000 / orang</p>
+                <p>
+                  Taman Wisata Jlengut di Desa Karangduren, Kebonarum, Klaten, adalah destinasi rekreasi dan edukasi yang diresmikan pada 29 November 2020. Dengan luas 1,5 hektar, taman ini memiliki mini zoo, wahana air, dan pengalaman menunggang kuda. Ikon utamanya adalah patung durian besar di pintu masuk, menjadikannya tempat rekreasi keluarga yang ideal di Klaten.</p>
+                <p class="contact">☎️ 085728181484</p>
               </div>
             </div>
-          <div class="news-item">
-            <img src="assets/img/logo/balai-desa-landscape.jpg" alt="Product Image">
-            <div class="card-content">
-              <h3>Homestay Aishwa</h3>
-              <p class="price">Rp 50000</p>
-              <p>Lorem50</p>
-              <p class="contact">☎️ 082111111111</p>
+            <div class="news-item">
+              <img src="assets/img/logo/taman-jlengut.jpg" alt="Product Image">
+              <div class="card-content">
+                <h3>Taman Jlengut</h3>
+                <p class="price">Rp 6000 / orang</p>
+                <p>
+                  Taman Wisata Jlengut di Desa Karangduren, Kebonarum, Klaten, adalah destinasi rekreasi dan edukasi yang diresmikan pada 29 November 2020. Dengan luas 1,5 hektar, taman ini memiliki mini zoo, wahana air, dan pengalaman menunggang kuda. Ikon utamanya adalah patung durian besar di pintu masuk, menjadikannya tempat rekreasi keluarga yang ideal di Klaten.</p>
+                <p class="contact">☎️ 085728181484</p>
+              </div>
             </div>
-          </div>
+            <div class="news-item">
+              <img src="assets/img/logo/taman-jlengut.jpg" alt="Product Image">
+              <div class="card-content">
+                <h3>Taman Jlengut</h3>
+                <p class="price">Rp 6000 / orang</p>
+                <p>
+                  Taman Wisata Jlengut di Desa Karangduren, Kebonarum, Klaten, adalah destinasi rekreasi dan edukasi yang diresmikan pada 29 November 2020. Dengan luas 1,5 hektar, taman ini memiliki mini zoo, wahana air, dan pengalaman menunggang kuda. Ikon utamanya adalah patung durian besar di pintu masuk, menjadikannya tempat rekreasi keluarga yang ideal di Klaten.</p>
+                <p class="contact">☎️ 085728181484</p>
+              </div>
+            </div>
         </div>
       </div>
     </div>
@@ -219,7 +251,7 @@
         </div>
         <div class="footer-contact">
             <p><i class="email-icon"></i> example@domain.com</p>
-            <p><i class="instagram-icon"></i> username</p>
+            <p><i class="instagram-icon"></i> Sumarna Sp.d</p>
             <p><i class="phone-icon"></i> +62 800 0000 0000</p>
         </div>
     </div>

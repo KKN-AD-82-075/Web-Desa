@@ -19,6 +19,15 @@ document.getElementById('search').addEventListener('input', function () {
   });
 });
 
+function toggleDropdown() {
+    const categories = document.getElementById('categoryMenu');
+    categories.style.display = categories.style.display === 'flex' ? 'none' : 'flex';
+}
+
+function showContent(section) {
+    console.log(`Navigating to section: ${section}`);
+}
+
 const loadExcelData = async (filePath) => {
     try {
         console.log(`Loading Excel file from: ${filePath}`);
