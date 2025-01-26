@@ -39,10 +39,10 @@
       
         <div class="categories">
             <button class="active" onclick="filterCategory('all')">All</button>
-            <button onclick="filterCategory('homestay')">Homestay</button>
-            <button onclick="filterCategory('kuliner')">Kuliner</button>
-            <button onclick="filterCategory('tour_guide')">Tour Guide</button>
+            <button onclick="filterCategory('produk')">Produk</button>
             <button onclick="filterCategory('toko')">Toko</button>
+            <button onclick="filterCategory('pelayanan')">Pelayanan</button>
+            <button onclick="filterCategory('tempat-makan')">Tempat Makan</button>
         </div>
 
         <div class="content-container">
@@ -77,7 +77,7 @@
     const products = [
     {
         category: 'kuliner',
-        name: 'Warung Klontong Anggita',
+        name: 'Data coba',
         price: 'Rp 0',
         description: 'Warung ini beralamat di RT 6. Menjual berbagai jajanan, minuman, dan lain-lain.',
         contact: '081326241649',
@@ -85,7 +85,7 @@
     },
     {
         category: 'toko',
-        name: 'Warung Kelontong Dheva',
+        name: 'Data coba',
         price: 'Rp 0',
         description: 'Warung kelontong yang menjual keperluan sehari-hari, seperti makanan, minuman, sembako, dan obat-obatan.',
         contact: '085225000303',
@@ -93,12 +93,100 @@
     },
     {
         category: 'homestay',
-        name: 'Homestay Aishwa',
+        name: 'Data coba',
         price: 'Rp 100.000/malam',
         description: 'Homestay nyaman terletak di tengah perkampungan dengan suasana asri.',
         contact: '082323920229',
         image: 'assets/img/logo/balai-desa.jpg'
-    }
+    },
+    {
+        category: 'produk',
+        name: 'Pak Suripto',
+        price: 'Rp xxx',
+        description: 'Telur Asin',
+        contact: '087812363149',
+        image: 'assets/img/logo/produk/suripto.jpg'
+    },
+    {
+        category: 'produk',
+        name: 'Bu Sri Lestari',
+        price: 'Rp xxx',
+        description: 'Telur Asin Oven',
+        contact: '082329394504',
+        image: 'assets/img/logo/produk/sri-lestari.jpg'
+    },
+    {
+        category: 'produk',
+        name: 'Pak Iwan',
+        price: 'Rp xxx',
+        description: 'Tempe',
+        contact: '085743652228',
+        image: 'assets/img/logo/produk/iwan.jpg'
+    },
+    {
+        category: 'produk',
+        name: 'Pak suroto',
+        price: 'Rp xxx',
+        description: 'Tempe',
+        contact: 'xxx',
+        image: 'assets/img/logo/produk/suroto.jpg'
+    },
+    {
+        category: 'produk',
+        name: 'Pak Nur Kholik',
+        price: 'Rp xxx',
+        description: 'Sablon',
+        contact: '081802696730',
+        image: 'assets/img/logo/produk/nur-kholik.jpg'
+    },
+    {
+        category: 'produk',
+        name: 'Pak Kiryadi',
+        price: 'Rp xxx',
+        description: 'Sarden Peyek',
+        contact: '087716852418',
+        image: 'assets/img/logo/produk/kiryadi.jpg'
+    },
+    {
+        category: 'produk',
+        name: 'Bu Sumini',
+        price: 'Rp xxx',
+        description: 'Rengginan - Ketan',
+        contact: '085640397741',
+        image: 'assets/img/logo/produk/sumini.jpg'
+    },
+    {
+        category: 'produk',
+        name: 'Bu Vani',
+        price: 'Rp xxx',
+        description: 'Cireng',
+        contact: '087734561884',
+        image: 'assets/img/logo/produk/vani.jpg'
+    },
+    {
+        category: 'produk',
+        name: 'Pak Suhardi',
+        price: 'Rp xxx',
+        description: 'Jamur Tiram dan Kuping',
+        contact: 'xxx',
+        image: 'assets/img/logo/produk/suhardi.jpg'
+    },
+    {
+        category: 'produk',
+        name: 'Pak Agung Widodo',
+        price: 'Rp xxx',
+        description: 'Jamur Tiram, Kuping & Pembuatan Baglog',
+        contact: '081316995959',
+        image: 'assets/img/logo/produk/agung-widodo.jpg'
+    },
+    {
+        category: 'produk',
+        name: 'Bu Murdiati',
+        price: 'Rp xxx',
+        description: 'Karag Genek',
+        contact: '085695214697',
+        image: 'assets/img/logo/produk/murdiati.jpg'
+    },
 ];
 
 function renderProducts(filter) {
