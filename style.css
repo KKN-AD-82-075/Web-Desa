@@ -6,6 +6,8 @@ html{
     font-family: Arial, sans-serif;
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
+    border: 1px solid rgb(0, 0, 0); 
 }
 
 body{
