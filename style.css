@@ -7,11 +7,7 @@ html{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    border: 1px solid rgb(0, 0, 0); 
-}
-
-body{
-    /* color: #F9F5F6; */
+    /* border: 1px solid rgb(0, 0, 0);  */
 }
 
 /* navbar */
@@ -91,7 +87,7 @@ nav .btn-navbar a:hover {
     /* opacity: 0.7; */
     animation: bgChange 5s infinite;
     background-size: cover;
-    height: 85vh;
+    height: 90vh;
     background-position: center;
     background-repeat: no-repeat;
     background-color: #183D3D;
@@ -100,7 +96,7 @@ nav .btn-navbar a:hover {
     align-items: center;
     padding: 5rem 1.5rem 5rem 1.5rem;
     color: #ffffffbb;
-    margin-top: 108px;
+    margin-top: 100px;
 }
 
 @keyframes bgChange{
@@ -221,7 +217,7 @@ div .row {
 
 .content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
@@ -242,6 +238,12 @@ div .row {
 }
 
 /* Profil Dusun */
+div .data {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin: 10px;
+}
 
 section {
     display: flex;
@@ -314,17 +316,17 @@ section div{
 }
 
 .map-box {
-  position: relative; /* Untuk mengatur posisi anak elemen */
+  position: relative; 
   width: 100%;
   max-width: 1200px;
-  aspect-ratio: 34 / 9;
+  aspect-ratio: 24 / 9;
   margin: auto;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: flex; /* Tambahkan Flexbox untuk memusatkan */
-  justify-content: center; /* Pusatkan secara horizontal */
-  align-items: center; /* Pusatkan secara vertikal */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
 }
 
 .map-box iframe {
@@ -340,7 +342,6 @@ section div{
 .info-table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 20px;
 }
 
 .info-table th, .info-table td {
@@ -406,8 +407,8 @@ iframe {
 }
 
 .news-item img {
-    width: 100%; /* Make image responsive */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto;
     object-fit: cover;
 }
 
@@ -491,64 +492,42 @@ main .container .content-berita{
 }
 
 /* UMKMM */
-@media (max-width: 768px) {
-    .categories {
-        margin: 0rem 2rem; /* Reduce margin on smaller screens */
-        gap: 30px; /* Reduce gap between buttons */
-    }
-
-    .categories button {
-        font-size: 0.9rem; /* Slightly smaller font size */
-        padding: 8px 16px; /* Adjust padding for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .categories {
-        flex-direction: column; /* Stack buttons vertically */
-        align-items: center; /* Center align buttons */
-        margin: 1rem; /* Add margin for better spacing */
-        gap: 15px; /* Further reduce gap between buttons */
-    }
-
-    .categories button {
-        width: 100%; /* Make buttons full width */
-        text-align: center; /* Center text in buttons */
-        padding: 12px; /* Adjust padding for touch targets */
-        font-size: 1rem; /* Maintain font size for readability */
-    }
-}
-
 .categories {
     display: flex;
     justify-content: center;
     background-color: #2287BF;
-    gap: 50px;
+    gap: 20px;
     padding: 0.3rem;
     margin: 0rem 4rem;
     border-radius: 30px;
-    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.categories select {
+    display: none;
+    background-color: #0e2b3d;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 1rem;
 }
 
 .categories button {
-    display: flex;
     background: none;
     border: none;
-    padding: 10px 20px; /* Consistent padding */
-    font-size: 1rem; /* Base font size */
+    padding: 10px 20px;
+    font-size: 1rem;
     cursor: pointer;
     color: white;
     border-radius: 5px;
+    text-align: center;
 }
-
 
 .categories button:hover {
     border-bottom: 2px solid #0e2b3d;
-    font-weight: bold;
-}
-
-.categories button.active {
-    background-color: #3b2f78;
     font-weight: bold;
 }
 
@@ -557,6 +536,11 @@ main .container .content-berita{
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
+}
+
+.card-content-education{
+    display: flex;
+    justify-content: center;
 }
 
 .content-container {
@@ -778,8 +762,28 @@ main .container .content-berita{
 
 }
 
+@media (max-width: 830px) {
+    .categories select {
+        display: block;
+        width: 100%;
+    }
+    
+    .categories button {
+        display: none;
+    }
+
+    div .data {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin: 10px;
+    }
+    
+}
+
 /* Media queries untuk responsivitas */
 @media (max-width: 768px) {
+    
     .profile img {
         width: 150px;
         height: 150px;
